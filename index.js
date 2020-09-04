@@ -10,7 +10,7 @@ function send() {
     // ajax
     $.ajax({
         type: "POST",
-        url: "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbzvEB8FsZRcQ1EJJQ5WPNIGuRcgsujMORHcGENR-nU-LlBUpo5t/exec",
+        url: "https://script.google.com/macros/s/AKfycbzvEB8FsZRcQ1EJJQ5WPNIGuRcgsujMORHcGENR-nU-LlBUpo5t/exec",
         data: {
             name,
             mail
