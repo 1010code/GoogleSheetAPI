@@ -1,4 +1,6 @@
 
+# 使用 Google App Script 將 Google 試算表變成資料庫
+## Google App Script
 此篇教學實作透過前端網頁，將資料寫入雲端硬碟中的 Google Sheets 當中。透過此方法我們就不需要建立後端資料庫來儲存這些表單資料。
 
 ## 建立 Google 雲端試算表
