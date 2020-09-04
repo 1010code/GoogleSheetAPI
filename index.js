@@ -7,20 +7,19 @@ function send() {
     let formData = new FormData();
     formData.append('name', name);
     formData.append('mail', mail);
+    // ajax
     $.ajax({
         type: "POST",
         url: "https://script.google.com/macros/s/AKfycbzvEB8FsZRcQ1EJJQ5WPNIGuRcgsujMORHcGENR-nU-LlBUpo5t/exec",
-        data: formData,
-        processData: false,
-        contentType: false,
-        dataType: "json",
-        success: function (response) {
-            console.log('response');
-            if (response.result == "成功") {
-                alert("成功");
-            }
+        data: {
+            name,
+            mail
         },
+        success: function(msg) {
+            console.log(msg);
+          }
     });
+    // fetch
     // Google App Script API URL
     // let url = 'https://script.google.com/macros/s/AKfycbzvEB8FsZRcQ1EJJQ5WPNIGuRcgsujMORHcGENR-nU-LlBUpo5t/exec';
     // // 建立 formData object
@@ -42,6 +41,17 @@ function send() {
     //             alert("成功");
     //         }
     //     });
+
+    // axios
+    // axios.post('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbzvEB8FsZRcQ1EJJQ5WPNIGuRcgsujMORHcGENR-nU-LlBUpo5t/exec', {
+    //     formData
+    //   })
+    //   .then(function (response) {
+    //     console.log(response.data);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
 };
 
 sendButton.addEventListener('click', send);
